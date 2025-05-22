@@ -73,6 +73,7 @@ modules:
     buildsystem: cmake-ninja
     config-opts:
       - -DRAPIDJSON_BUILD_TESTS=OFF
+      - -DRAPIDJSON_BUILD_EXAMPLES=OFF
     sources:
       - type: git
         url: https://github.com/Tencent/rapidjson
