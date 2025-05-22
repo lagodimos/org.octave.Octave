@@ -71,13 +71,12 @@ modules:
 
   - name: rapidjson
     buildsystem: cmake-ninja
+    config-opts:
+      - -DRAPIDJSON_BUILD_TESTS=OFF
     sources:
       - type: git
         url: https://github.com/Tencent/rapidjson
         commit: 3b2441b87f99ab65f37b141a7b548ebadb607b96
-      - type: shell
-        commands:
-          - find -name CMakeLists.txt | xargs sed -e 's|-Werror||' -i # Don't use -Werror
 
   - name: qscintilla
     buildsystem: qmake
@@ -435,3 +434,4 @@ modules:
         commands:
           - sed -i '/^%!/d' libinterp/corefcn/data.cc
           - sed -i '/^%!/d' scripts/sparse/eigs.m
+          - sed -i 's|<id>org\.octave\.Octave\.desktop</id>|<id>org.octave.Octave</id>|' etc/icons/org.octave.Octave.metainfo.xml
