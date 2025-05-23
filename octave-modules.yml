@@ -436,3 +436,4 @@ modules:
           - sed -i '/^%!/d' libinterp/corefcn/data.cc
           - sed -i '/^%!/d' scripts/sparse/eigs.m
           - sed -i 's|<id>org\.octave\.Octave\.desktop</id>|<id>org.octave.Octave</id>|' etc/icons/org.octave.Octave.metainfo.xml
+          - sed -i 's|https://www.gnu.org/software/octave/img/screenshot.png|https://octave.org/img/screenshot.png|g' etc/icons/org.octave.Octave.metainfo.xml
