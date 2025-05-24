@@ -20,6 +20,9 @@ finish-args:
   - --env=LD_LIBRARY_PATH=/app/lib # required for linking stand-alone programs with Octave
   - --env=OCTAVE_HOME=/app
   - --env=PKG_CONFIG_PATH=/app/lib/pkgconfig:/app/share/pkgconfig
+  - --env=XDG_SESSION_TYPE=x11    # qt.qpa.plugin: Could not load the Qt platform plugin "wayland" in "" even though it was found. 
+  - --env=XDG_CURRENT_DESKTOP=KDE # qt.qpa.qgnomeplatform: Could not find color scheme  ""
+  - --unset-env=SESSION_MANAGER   # Qt: Session management error: Could not open network socket
 cleanup:
   - /bin/*lpr*.sh
   - /bin/GraphicsMagick*config
