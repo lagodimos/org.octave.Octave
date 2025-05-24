@@ -1,5 +1,5 @@
 app-id: org.octave.Octave
-runtime: org.kde.Sdk
+runtime: org.kde.Platform
 runtime-version: 5.15-24.08
 sdk: org.kde.Sdk
 command: octave
